@@ -26,6 +26,9 @@ if (Meteor.isClient) {
           Session.set('adding_category',false);
         }
       }
+    },
+    'focusout #add-category': function(e,t){
+       Session.set('adding_category',false);
     }
   });
 
