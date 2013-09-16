@@ -1,0 +1,33 @@
+<head>
+  <title>LendLib</title>
+</head>
+
+<body>
+	<div class="container">
+  <div id="categories-container">
+  	{{> categories}}
+  </div>
+  </div>
+</body>
+
+
+
+<template name = "categories">
+    <h2 class="title">My stuff</h2>
+    <div id="categories" class="btn-group">
+    {{#if new_cat}}
+        <div class="category">
+        	<input type="text" id="add-category" value=""/>
+        </div>
+      {{else}}
+        <div id="btnNewCat" class="category btn">&plus;</div>
+    {{/if}}
+    	{{#each Lists}}
+    	<div class="category btn">
+    	{{Category}}
+    	</div>
+    	{{/each}}
+    </div>
+</template>
+
+	
